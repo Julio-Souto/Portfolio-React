@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Header from './Header'
-import { Link } from 'react-router-dom'
-import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase'
-import Body from './Body'
 import Footer from './Footer'
+import Nav from './Nav'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [loggeado, setLoggeado] = useState(false)
@@ -22,33 +22,19 @@ function App() {
     });
   }, [])
 
-  const handleLogin = () => {
-    signOut(auth)
-      .then(() => {
-        setLogin(null)
-        setLoggeado(false)
-        // localStorage.removeItem('user')
-      })
-      .catch((error) => {
-        console.log(error.message)
-      })
-
-  }
-
   return (
     <>
-      <button className='log-in-button' onClick={handleLogin}>{!loggeado ? <Link to='LoginForm'>Inicia Sesion</Link> : "Cerrar Sesion"}</button>
-      <Header />
-      {login != null ?
-      <div className='mt-4 text-center'>
-        <h2 className='text-2xl font-bold'>Bienvenido</h2>
-        <p>{login.email}</p>
-      </div> : null }
-      <h2 className='mt-4 text-2xl font-bold text-center'>Proyectos</h2>
-      <div className='flex justify-center mt-4'>
-        <Body />
+      <Nav loggeado={loggeado} setLog={() => {setLoggeado(false); setLogin(null)}}/>
+      <div className='flex flex-col'>
+        <Header />
+        {login != null ?
+        <div className='mt-4 text-center'>
+          <h2 className='text-2xl font-bold'>Bienvenido</h2>
+          <p>{login.email}</p>
+        </div> : null }
+        <Outlet />
+        <Footer />
       </div>
-      <Footer />
     </>
   )
 }

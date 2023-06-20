@@ -3,11 +3,11 @@ import image from './assets/react.svg'
 function Header() {
   return (
     <>
-    <div className="flex w-screen p-4 header-container bg-slate-700">
-      <div className="w-2/6 m-auto">
+    <div className="flex flex-col p-4 lg:flex-row lg:w-screen header-container bg-slate-700">
+      <div className="m-auto lg:w-2/6">
         <img src={image} alt="image" className='object-cover w-20 ml-auto'/>
       </div>
-      <div className="flex flex-col w-4/6 space-y-3 text-center">
+      <div className="flex flex-col space-y-3 text-center lg:w-4/6">
         <h1 className='text-5xl'>Title</h1>
         <h3 className='text-3xl text-slate-400'>Subtitle</h3>
         <div className="flex items-center self-center space-x-4">

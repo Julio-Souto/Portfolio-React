@@ -2,8 +2,15 @@
 function Footer() {
   return (
     <>
-      <div className="absolute bottom-0 flex justify-end w-screen p-4 bg-slate-700">
-        <p><span className="font-bold">Contacto: </span>julio.souto.zas@gmail.com</p>
+      <div className="flex justify-between p-4 lg:w-screen lg:absolute lg:bottom-0 bg-slate-700">
+        <div className='space-x-4'>
+          <a href="" className="text-xl fa-brands fa-linkedin"></a>
+          <a href="" className='text-xl fa fa-globe'></a>
+          <a href="" className='text-xl fa-brands fa-github'></a>
+        </div>
+        <div>
+          <p><span className="font-bold">Contacto: </span>julio.souto.zas@gmail.com</p>
+        </div>
       </div>
     </>
   )

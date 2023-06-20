@@ -7,16 +7,28 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import LoginForm from './LoginForm.jsx';
+import Body from './Body.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/LoginForm",
+        element: <LoginForm />,
+      },
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/Proyectos",
+        element: <Body />,
+      },
+    ]
   },
-  {
-    path: "/LoginForm",
-    element: <LoginForm />,
-  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
