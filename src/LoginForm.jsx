@@ -51,6 +51,7 @@ function LoginForm() {
   return (
     <>
       <div className='space-y-4 login-container'>
+        <h2 className='text-2xl font-bold text-center'>Inicia Sesion</h2>
         { error != "" ? <ErrorMessage error={error} /> : null }
         <form action="#" onSubmit={handleSignIn}>
           <fieldset className='flex flex-col p-4 space-y-4 text-left border-2 rounded-md w-96 border-slate-500'>
