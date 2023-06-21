@@ -6,11 +6,13 @@ import { auth } from './firebase'
 import Footer from './Footer'
 import Nav from './Nav'
 import { Outlet } from 'react-router-dom'
+// import { _getDocs } from './cloud-firestore'
 
 function App() {
   const [loggeado, setLoggeado] = useState(false)
-  const [login, setLogin] = useState("")
+  const [login, setLogin] = useState(null)
 
+  // _getDocs("prueba")
   useEffect(() => {
     // if(localStorage.getItem('user') != "")
     //   setLogin(JSON.parse(localStorage.getItem('user')))
@@ -19,12 +21,16 @@ function App() {
         setLogin(user)
         setLoggeado(true)
       }
+      else{
+        setLogin(null)
+        setLoggeado(false)
+      }
     });
   }, [])
 
   return (
     <>
-      <Nav loggeado={loggeado} setLog={() => {setLoggeado(false); setLogin(null)}}/>
+      <Nav loggeado={loggeado}/>
       <div className='flex flex-col'>
         <Header />
         {login != null ?

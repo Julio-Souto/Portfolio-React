@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
     <div className="flex flex-col p-4 lg:flex-row lg:w-screen header-container bg-slate-700">
-      <div className="m-auto lg:w-2/6">
+      <div className="m-auto mt-2 mb-4 lg:w-2/6 lg:my-auto">
         <img src={image} alt="image" className='object-cover w-20 ml-auto'/>
       </div>
       <div className="flex flex-col space-y-3 text-center lg:w-4/6">
