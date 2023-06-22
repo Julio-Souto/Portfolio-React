@@ -7,6 +7,7 @@ import Footer from './Footer'
 import Nav from './Nav'
 import { Outlet } from 'react-router-dom'
 // import { _getDocs } from './cloud-firestore'
+import Trail from './Trail'
 
 function App() {
   const [loggeado, setLoggeado] = useState(false)
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <Trail />
       <Nav loggeado={loggeado}/>
       <div className='flex flex-col'>
         <Header />

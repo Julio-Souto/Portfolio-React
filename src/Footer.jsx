@@ -2,7 +2,7 @@
 function Footer() {
   return (
     <>
-      <div className="flex justify-between p-4 lg:w-screen lg:absolute lg:bottom-0 bg-slate-700">
+      <div className="flex justify-between p-4 bg-slate-700">
         <div className='space-x-4'>
           <a href="" className="text-xl fa-brands fa-linkedin"></a>
           <a href="" className='text-xl fa fa-globe'></a>

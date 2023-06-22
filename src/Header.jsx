@@ -1,9 +1,9 @@
-import image from './assets/react.svg'
+import image from './assets/icons/react.svg'
 
 function Header() {
   return (
     <>
-    <div className="flex flex-col p-4 lg:flex-row lg:w-screen header-container bg-slate-700">
+    <div className="flex flex-col p-4 lg:flex-row header-container bg-slate-700">
       <div className="m-auto mt-2 mb-4 lg:w-2/6 lg:my-auto">
         <img src={image} alt="image" className='object-cover w-20 ml-auto'/>
       </div>

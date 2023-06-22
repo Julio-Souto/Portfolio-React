@@ -9,6 +9,7 @@ import {
 import Body from './Body.jsx';
 import RegisterForm from './RegisterForm.jsx';
 import LoginForm from './LoginForm.jsx';
+import ProjectPage from './components/ProjectPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/Proyectos",
         element: <Body />,
+      },
+      {
+        path: "/PaginaProyecto",
+        element: <ProjectPage />,
       },
     ]
   },
