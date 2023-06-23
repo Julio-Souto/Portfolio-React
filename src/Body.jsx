@@ -13,7 +13,7 @@ function Body() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <CardComponent image={android3} androidb={null} javab={null} sqliteb={null} onClick={
             () => { 
-              navigate("PaginaProyecto", {state: { title:"App Reproductor Android", description:
+              navigate("/PaginaProyecto", {state: { title:"App Reproductor Android", description:
                 <div className="container space-y-4"> 
                   <p>O proxecto consiste nun reprodutor de música en Android. A aplicación permite ao usuario:</p>
                   <ul className="ml-4 list-disc">

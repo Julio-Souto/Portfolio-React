@@ -7,7 +7,7 @@ import Footer from './Footer'
 import Nav from './Nav'
 import { Outlet } from 'react-router-dom'
 // import { _getDocs } from './cloud-firestore'
-import Trail from './Trail'
+import { MouseTrail } from '@stichiboi/react-elegant-mouse-trail'
 
 function App() {
   const [loggeado, setLoggeado] = useState(false)
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <Trail />
+      <MouseTrail strokeColor='#413cff' lag={0.3} lineDuration={30} lineWidthStart={10} />
       <Nav loggeado={loggeado}/>
       <div className='flex flex-col'>
         <Header />

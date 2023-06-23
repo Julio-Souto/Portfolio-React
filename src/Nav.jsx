@@ -16,7 +16,7 @@ function Nav({loggeado}) {
   return (
     <>
       <div className="flex items-center justify-between p-4 bg-slate-800">
-        <h2 className="text-2xl font-bold">Portfolio</h2>
+      <Link to='/'><h2 className="text-2xl font-bold text-white">Portfolio</h2></Link>
         <div className="space-x-4">
           <Link to='/'>Inicio</Link>
           <Link to='Proyectos'>Proyectos</Link>

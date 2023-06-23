@@ -1,18 +1,4 @@
-import android from '../assets/icons/android-original-wordmark.svg'
-import angular from '../assets/icons/angularjs-original-wordmark.svg'
-import csharp from '../assets/icons/csharp-original.svg'
-import css from '../assets/icons/css3-original-wordmark.svg'
-import firebase from '../assets/icons/firebase-plain-wordmark.svg'
-import html from '../assets/icons/html5-original-wordmark.svg'
-import java from '../assets/icons/java-original-wordmark.svg'
-import javascript from '../assets/icons/javascript-original.svg'
-import mysql from '../assets/icons/mysql-original-wordmark.svg'
-import php from '../assets/icons/php-original.svg'
-import react from '../assets/icons/react-original-wordmark.svg'
-import sqlite from '../assets/icons/sqlite-original-wordmark.svg'
-import unity from '../assets/icons/unity-original-wordmark.svg'
-import tailwind from '../assets/icons/tailwindcss-original-wordmark.svg'
-import typescript from '../assets/icons/typescript-original.svg'
+import { android, angular, csharp, css, firebase, html, java, javascript, mysql, php, react, sqlite, unity, tailwind, typescript } from '../assets/icons'
 
 // eslint-disable-next-line react/prop-types
 function CardComponent({image = "http://placekitten.com/500/500", title = "Title", description = "Description", onClick, androidb = false, angularb = false, csharpb = false, cssb = false, firebaseb = false, htmlb = false, javab = false, javascriptb = false, mysqlb = false, sqliteb = false, unityb = false, tailwindb = false, typescriptb = false, reactb = false, phpb = false }) {
@@ -29,7 +15,7 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
             {description}
           </p>
         </div>
-        <div className="absolute flex flex-col justify-between w-5/6 opacity-0 h-5/6 top-3 left-4 group-hover:opacity-100">
+        <div className="absolute flex flex-col justify-between w-5/6 opacity-0 h-5/6 top-3 left-4 group-hover:opacity-100 group-hover:cursor-grab">
           <div className='space-y-3 text-white'>
             <p className='text-xl'>Usando:</p>
             <div className="flex flex-wrap items-center justify-start gap-4">

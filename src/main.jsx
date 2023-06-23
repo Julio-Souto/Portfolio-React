@@ -10,6 +10,7 @@ import Body from './Body.jsx';
 import RegisterForm from './RegisterForm.jsx';
 import LoginForm from './LoginForm.jsx';
 import ProjectPage from './components/ProjectPage.jsx';
+import Knowledge from './Knowledge.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <><Knowledge /><Body /></>,
       },
       {
         path: "/RegisterForm",

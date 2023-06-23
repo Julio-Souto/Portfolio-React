@@ -47,7 +47,7 @@ function RegisterForm() {
   }
   return (
     <>
-      <div className='space-y-4 login-container'>
+      <div className='space-y-4 login-container justify-stretch'>
         <h2 className='text-2xl font-bold text-center'>Regístrate</h2>
         { error != "" ? <ErrorMessage error={error} /> : null }
         <WarningMessage warning={"Esto solo es una aplicación de prueba! No introduzcas datos reales"} />
