@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <MouseTrail strokeColor='#413cff' lag={0.3} lineDuration={30} lineWidthStart={10} />
+      <MouseTrail strokeColor='#413cff' lag={0.7} lineDuration={30} lineWidthStart={10} />
       <Nav loggeado={loggeado}/>
       <div className='flex flex-col'>
         <Header />

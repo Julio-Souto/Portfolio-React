@@ -8,8 +8,8 @@ function Body() {
   const navigate = useNavigate()
   return (
     <>
-      <h2 className='mt-4 text-2xl font-bold text-center'>Proyectos</h2>
-      <div className='flex justify-center mt-4'>
+      <h2 className='mt-6 text-2xl font-bold text-center'>Proyectos</h2>
+      <div className='flex justify-center my-4'>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <CardComponent image={android3} androidb={null} javab={null} sqliteb={null} onClick={
             () => { 
