@@ -4,7 +4,7 @@ import { android, angular, csharp, css, firebase, html, java, javascript, mysql,
 function CardComponent({image = "http://placekitten.com/500/500", title = "Title", description = "Description", onClick, androidb = false, angularb = false, csharpb = false, cssb = false, firebaseb = false, htmlb = false, javab = false, javascriptb = false, mysqlb = false, sqliteb = false, unityb = false, tailwindb = false, typescriptb = false, reactb = false, phpb = false }) {
   return (
     <>
-      <div className="container relative max-w-sm rounded shadow-lg group max-h-96" onClick={onClick}>
+      <div className="container relative max-w-sm rounded-lg shadow-lg bg-slate-800 group max-h-96" onClick={onClick}>
         <div className="flex items-center justify-center overflow-hidden rounded-t h-1/2 group-hover:opacity-10"> 
           <img className="min-w-full min-h-full " src={image} alt="Project Image"/>
         </div>

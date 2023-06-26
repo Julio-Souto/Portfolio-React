@@ -11,6 +11,7 @@ import RegisterForm from './RegisterForm.jsx';
 import LoginForm from './LoginForm.jsx';
 import ProjectPage from './components/ProjectPage.jsx';
 import Knowledge from './Knowledge.jsx';
+import AddReadForm from './AddReadForm.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/PaginaProyecto",
         element: <ProjectPage />,
+      },
+      {
+        path: "/AddReadForm",
+        element: <AddReadForm />,
       },
     ]
   },

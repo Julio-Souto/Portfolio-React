@@ -3,13 +3,14 @@ import CardComponent from "./components/CardComponent"
 import android1 from './assets/images/reproductorandroid1.png'
 import android2 from './assets/images/reproductorandroid2.png'
 import android3 from './assets/images/reproductorandroid3.png'
+import VideoComponent from "./components/VideoComponent"
 
 function Body() {
   const navigate = useNavigate()
   return (
     <>
       <h2 className='mt-6 text-2xl font-bold text-center'>Proyectos</h2>
-      <div className='flex justify-center my-4'>
+      <div className='flex justify-center my-4 mb-20'>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <CardComponent image={android3} androidb={null} javab={null} sqliteb={null} onClick={
             () => { 
@@ -39,6 +40,7 @@ function Body() {
           <CardComponent htmlb={null} cssb={null} javascriptb={null}/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null}/>
           <CardComponent csharpb={null} unityb={null} sqliteb={null} />
+          <VideoComponent />
         </div>
       </div>
     </>

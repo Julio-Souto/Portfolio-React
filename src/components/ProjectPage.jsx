@@ -5,7 +5,7 @@ function ProjectPage() {
   const { title="",description=<div></div>,images=[], github = "", web = "" } = state
   return (
     <>
-      <div className="container flex flex-col p-8 mx-auto space-y-4">
+      <div className="container flex flex-col p-8 mx-auto mb-12 space-y-4">
         <div>
           <div className="flex items-center justify-between">
             <h2 className="mb-4 text-2xl font-bold underline">{title}</h2>

@@ -6,14 +6,12 @@ import { auth } from './firebase'
 import Footer from './Footer'
 import Nav from './Nav'
 import { Outlet } from 'react-router-dom'
-// import { _getDocs } from './cloud-firestore'
 import { MouseTrail } from '@stichiboi/react-elegant-mouse-trail'
 
 function App() {
   const [loggeado, setLoggeado] = useState(false)
   const [login, setLogin] = useState(null)
 
-  // _getDocs("prueba")
   useEffect(() => {
     // if(localStorage.getItem('user') != "")
     //   setLogin(JSON.parse(localStorage.getItem('user')))

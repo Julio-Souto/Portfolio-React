@@ -1,7 +1,16 @@
 #root {
   max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
 }
-
+.text-show {
+  opacity: 1;
+  transition: all 1s ease;
+}
+.text-fade {
+  opacity: 0;
+  transition: all 1s ease;
+}
 .login-container{
   height: 100%;
   padding: 2rem;

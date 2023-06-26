@@ -20,6 +20,7 @@ function Nav({loggeado}) {
         <div className="space-x-4">
           <Link to='/'>Inicio</Link>
           <Link to='Proyectos'>Proyectos</Link>
+          <Link to='AddReadForm'>Añadir Experiencia</Link>
           <Link to='RegisterForm'>Regístrate</Link>
           <button className='log-in-button' onClick={handleLogin}>{!loggeado ? <Link to='LoginForm'>Inicia Sesion</Link> : "Cerrar Sesion"}</button>
         </div>
