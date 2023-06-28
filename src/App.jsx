@@ -34,11 +34,12 @@ function App() {
       <div className='flex flex-col'>
         <Header />
         {login != null ?
-        <div className='mt-4 text-center'>
-          <h2 className='text-2xl font-bold'>Bienvenido</h2>
-          <p>{login.email}</p>
+        <div className='px-2 py-1 text-center lg:text-right'>
+          <h2 className='inline-block mr-2 text-2xl font-bold'>Bienvenido</h2>
+          <p className='inline-block'>{login.email}</p>
         </div> : null }
         <Outlet />
+        <div className='spacer'></div>
         <Footer />
       </div>
     </>

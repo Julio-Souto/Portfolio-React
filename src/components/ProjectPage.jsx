@@ -1,11 +1,28 @@
-import { useLocation } from "react-router-dom"
+import { useRef, useState } from "react"
+import { useLocation, Navigate } from "react-router-dom"
 
 function ProjectPage() {
+  const [image, setImage] = useState("")
   const { state } = useLocation()
+  const imageRef = useRef()
+  
+  if(!state)
+    return <Navigate replace to="/" />
+  
   const { title="",description=<div></div>,images=[], github = "", web = "" } = state
+
+  const handleImage = (image) => {
+    setImage(image)
+    const display = imageRef.current
+    display.style.display = "block"
+  }
+  const hideImage = () => {
+    const display = imageRef.current
+    display.style.display = "none"
+  }
   return (
     <>
-      <div className="container flex flex-col p-8 mx-auto mb-12 space-y-4">
+      <div className="container flex flex-col p-8 mx-auto mb-4 space-y-6">
         <div>
           <div className="flex items-center justify-between">
             <h2 className="mb-4 text-2xl font-bold underline">{title}</h2>
@@ -15,14 +32,20 @@ function ProjectPage() {
               {github == "" ? null : <a href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
             </div>
           </div>
-          {description}
+          <div className="container space-y-4" dangerouslySetInnerHTML={{__html:description}}></div>
         </div>
         <div className="flex justify-around gap-2 overflow-auto h-96">
           {images.map((image, index) => 
-            <img key={index} src={image} alt={"Project Image "+image} />
+            <img key={index} src={image} alt={"Project Image "+image} onClick={() => handleImage(image)}/>
           )}
         </div>
       </div>
+      <div ref={imageRef} className="modal">
+        <div onClick={hideImage} className="modal-content">
+          <img src={image} alt={"Project Image "+image} />
+        </div>
+      </div>
+
     </>
   )
 }

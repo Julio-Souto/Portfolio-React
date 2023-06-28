@@ -13,7 +13,7 @@ function Header() {
       const span = transition.current
       span.className = "text-3xl text-slate-400 text-fade"
       setTimeout(() => {
-        setTexto("Desarrollador de Software Multiplataforma")
+        setTexto("Desarrollador Web Front-End")
         const span = transition.current
         span.className = "text-3xl text-slate-400 text-show"
       },1000)
@@ -23,7 +23,7 @@ function Header() {
       const span = transition.current
       span.className = "text-3xl text-slate-400 text-fade"
       setTimeout(() => {
-        setTexto("Desarrollador Web Front-End")
+        setTexto("Desarrollador de Software Multiplataforma")
         const span = transition.current
         span.className = "text-3xl text-slate-400 text-show"
       },1000)
@@ -53,9 +53,9 @@ function Header() {
         <div className="flex items-center self-center space-x-4">
           <h5 className='text-xl'>Links:</h5>
           <div className='space-x-4'>
-            <a href="" className="text-xl fa-brands fa-linkedin"></a>
+            <a href="https://www.linkedin.com/in/juliomanuelsouto/" target='_blank' rel="noopener noreferrer"  className="text-xl fa-brands fa-linkedin"></a>
             <EmailButton />
-            <a href="" className='text-xl fa-brands fa-github'></a>
+            <a href="https://github.com/Julio-Souto" target='_blank' rel="noopener noreferrer" className='text-xl fa-brands fa-github'></a>
           </div>
         </div>
       </div>

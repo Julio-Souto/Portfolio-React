@@ -1,7 +1,7 @@
-import { android, angular, csharp, css, firebase, html, java, javascript, mysql, php, react, sqlite, unity, tailwind, typescript } from '../assets/icons'
+import { android, angular, csharp, css, firebase, html, java, javascript, mysql, php, react, sqlite, unity, tailwind, typescript, rest } from '../assets/icons'
 
 // eslint-disable-next-line react/prop-types
-function CardComponent({image = "http://placekitten.com/500/500", title = "Title", description = "Description", onClick, androidb = false, angularb = false, csharpb = false, cssb = false, firebaseb = false, htmlb = false, javab = false, javascriptb = false, mysqlb = false, sqliteb = false, unityb = false, tailwindb = false, typescriptb = false, reactb = false, phpb = false }) {
+function CardComponent({image = "http://placekitten.com/500/500", title = "Title", description = "Description", onClick, androidb = false, angularb = false, csharpb = false, cssb = false, firebaseb = false, htmlb = false, javab = false, javascriptb = false, mysqlb = false, sqliteb = false, unityb = false, tailwindb = false, typescriptb = false, reactb = false, phpb = false, restb = false, web = "", github = "" }) {
   return (
     <>
       <div className="container relative max-w-sm rounded-lg shadow-lg bg-slate-800 group max-h-96" onClick={onClick}>
@@ -11,7 +11,6 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
         <div className="px-6 py-4 h-1/2 group-hover:opacity-10">
           <div className="mb-2 text-xl font-bold">{title}</div>
           <p className="text-base text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi temporibus ab nemo voluptatem animi, assumenda, placeat voluptas eius corrupti iure quisquam unde dicta ex nostrum ipsum eligendi? 
             {description}
           </p>
         </div>
@@ -28,6 +27,7 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
              {firebaseb ?? <img className='w-10 h-10' src={firebase} alt="icon" /> }
              {javab ?? <img className='w-10 h-10' src={java} alt="icon" /> }
              {javascriptb ?? <img className='w-10 h-10' src={javascript} alt="icon" /> }
+             {restb ?? <img className='w-10 h-10' src={rest} alt="icon" /> }
              {reactb ?? <img className='w-10 h-10' src={react} alt="icon" /> }
              {phpb ?? <img className='w-10 h-10' src={php} alt="icon" /> }
              {unityb ?? <img className='w-10 h-10' src={unity} alt="icon" /> }
@@ -39,8 +39,8 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
           <div className="flex items-center space-x-4">
             <p className='text-xl'>Links:</p>
             <div className='space-x-4'>
-              <a href="" className='text-xl fa fa-globe'></a>
-              <a href="" className='text-xl fa-brands fa-github'></a>
+              {web == "" ? null : <a href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
+              {github == "" ? null : <a href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
             </div>
           </div>
         </div>

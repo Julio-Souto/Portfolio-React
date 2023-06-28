@@ -12,6 +12,8 @@ import LoginForm from './LoginForm.jsx';
 import ProjectPage from './components/ProjectPage.jsx';
 import Knowledge from './Knowledge.jsx';
 import AddReadForm from './AddReadForm.jsx';
+import VideoPage from './components/VideoPage.jsx';
+import RestrictedAccess from './components/RestrictedAccess.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,8 +41,20 @@ const router = createBrowserRouter([
         element: <ProjectPage />,
       },
       {
+        path: "/PaginaVideo",
+        element: <VideoPage />,
+      },
+      {
         path: "/AddReadForm",
         element: <AddReadForm />,
+      },
+      {
+        path: "/Restricted",
+        element: <RestrictedAccess />,
+      },
+      {
+        path: "/Perfil",
+        element: <Knowledge />,
       },
     ]
   },
