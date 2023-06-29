@@ -69,7 +69,7 @@ function Nav({loggeado}) {
   return (
     <>
       <div className="flex items-center justify-between p-4 bg-slate-800">
-      <Link to='/'><h2 className="text-2xl font-bold text-white">Portfolio</h2></Link>
+        <Link to='/'><h2 className="text-2xl font-bold text-white">Portfolio</h2></Link>
         <div className="space-x-3 nav">
           <Link to='/'>Inicio</Link>
           <div className="separator"></div>
@@ -82,26 +82,26 @@ function Nav({loggeado}) {
           <Link to='RegisterForm'>Regístrate</Link>
           <button className='text-white' onClick={handleLogin}>{!loggeado ? <Link to='LoginForm'>Inicia Sesion</Link> : "Cerrar Sesion"}</button>
         </div>
-        
+      
         <IconButton
-            id="outer-container"
-            sx={{padding: 0, outline: "none !important" }}
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={toggleDrawer('right', true)}
-          >
-            <MenuIcon sx={{width: "32px", height: "32px"}}/>
-          </IconButton>
-            <SwipeableDrawer
-              PaperProps={{sx: {width:"40%"}}}
-              anchor={'right'}
-              open={state['right']}
-              onClose={toggleDrawer('right', false)}
-              onOpen={toggleDrawer('right', true)}
-            >
-              {list('right')}
-            </SwipeableDrawer>
+          id="outer-container"
+          sx={{padding: 0, outline: "none !important" }}
+          color="inherit"
+          aria-label="open drawer"
+          edge="start"
+          onClick={toggleDrawer('right', true)}
+        >
+          <MenuIcon sx={{width: "32px", height: "32px"}}/>
+        </IconButton>
+        <SwipeableDrawer
+          PaperProps={{sx: {width:"40%"}}}
+          anchor={'right'}
+          open={state['right']}
+          onClose={toggleDrawer('right', false)}
+          onOpen={toggleDrawer('right', true)}
+        >
+          {list('right')}
+        </SwipeableDrawer>
         
       </div>
     </>

@@ -10,10 +10,9 @@ function VideoComponent({onClick,image="http://placekitten.com/500/500"}) {
           <img className="min-w-full min-h-full " src={image} alt="Project Image"/>
         </div>
         <div className="px-6 py-4 h-1/2">
-          <div className="mb-2 text-xl font-bold">{"title"}</div>
+          <div className="mb-2 text-xl font-bold">{"El mejor vídeo de Internet"}</div>
           <p className="text-base text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi temporibus ab nemo voluptatem animi, assumenda, placeat voluptas eius corrupti iure quisquam unde dicta ex nostrum ipsum eligendi? 
-            {"description"}
+            {"Simplemente el mejor vídeo de Internet"}
           </p>
         </div>
       </div>

@@ -83,7 +83,7 @@ function AddReadForm() {
   }
   return (
     <>
-      <div className='flex gap-4 mx-auto'>
+      <div className='flex flex-col gap-4 mx-auto sm:flex-row'>
         <div className='space-y-4 login-container justify-stretch'>
           <h2 className='text-2xl font-bold text-center'>{edit}</h2>
           { error != "" ? <ErrorMessage error={error} /> : null }
@@ -103,7 +103,7 @@ function AddReadForm() {
           </form>
           { loading ? <LoadingSpinner /> : null }
         </div>
-        <div className='mt-8'>
+        <div className='mx-auto mb-4 text-center sm:mt-8'>
           <h2 className='text-2xl font-bold text-center'>Experiencias</h2>
           <ul className='mt-2 list-disc'>
             {experiencias != null ? experiencias.map((item) => 

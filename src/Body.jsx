@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import CardComponent from "./components/CardComponent"
-import {android1, android2, android3, articlepreview1, articlepreview2, productpreview1, productpreview2, introcomponent1, introcomponent2, introsection, qrcomponent1, qrcomponent2, ratingcomponent1, ratingcomponent2, moviesapisearch1, moviesapisearch2, moviesapisearch3, jsregexp} from './assets/images'
+import {android1, android2, android3, articlepreview1, articlepreview2, productpreview1, productpreview2, introcomponent1, introcomponent2, introsection, qrcomponent1, qrcomponent2, ratingcomponent1, ratingcomponent2, moviesapisearch1, moviesapisearch2, moviesapisearch3, jsregexp, musicdbapi1, musicdbapi2, giphyapi1, giphyapi2, giphyapi3, githubapi, catclicker, unity1, unity2, unity3, unity4, unity5, portfolio} from './assets/images'
 import VideoComponent from "./components/VideoComponent"
 
 function Body() {
@@ -10,6 +10,16 @@ function Body() {
       <h2 className='mt-6 text-2xl font-bold text-center'>Proyectos</h2>
       <div className='flex justify-center my-4 mb-6'>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} tailwindb={null} firebaseb={null} image={portfolio} title="Portfolio Personal usando React" description="La descripción de esta misma página" web="https://julio-souto.github.io/GitHub-API-Dist/" github="https://github.com/Julio-Souto/Github-Api-React" onClick={
+            () => { 
+              navigate("/PaginaProyecto", {state: { title:"Buscador de Usuarios usando la API de GitHub", description:
+                `
+                  <p>Buscador simple de Usuarios que devuelve la imagen de perfil haciendo fetching de datos a la API de GitHub, usando HTML, CSS, Javascript y React</p>
+                `,
+               images:[portfolio], web:"https://julio-souto.github.io/GitHub-API-Dist/", github:"https://github.com/Julio-Souto/Github-Api-React" }
+              })
+             }
+          }/>
           <CardComponent image={android3} title="Reproductor de Música en Android" description="Aplicacion de Android que permite reproducir archivos locales de música y gestionar listas de reproducción" androidb={null} javab={null} sqliteb={null} 
           github="https://github.com/Julio-Souto/Reproductor-Android" onClick={
             () => { 
@@ -28,6 +38,29 @@ function Body() {
                   </ul>
                 `,
                images:[android1,android2,android3], github:"https://github.com/Julio-Souto/Reproductor-Android" }
+              })
+             }
+          }/>
+          <CardComponent csharpb={null} unityb={null} sqliteb={null} image={unity1} title="Reproductor de música en Unity" description="Aplicacion de Unity que permite reproducir archivos locales de música y gestionar listas de reproducción" github="https://github.com/Julio-Souto/Reproductor-Unity" onClick={
+            () => { 
+              navigate("/PaginaProyecto", {state: { title:"Reproductor de música en Unity", description:
+                `
+                <p>La aplicación consiste en un reproductor de música que reproduce archivos existentes en el dispositivo y permite descargar canciones a partir de una URL. Todas las funcionalidades de la aplicación son:</p>
+                <ul>
+                    <li>Reproducir canciones existentes en el dispositivo, en las carpetas especificadas por el usuario.</li>
+                    <li>Reproducir canciones en orden aleatorio y en bucle. </li>
+                    <li>Crear y editar listas de reproducción.</li>
+                    <li>Buscar canciones ya existentes en la aplicación.</li>
+                    <li>Mostrar listas de canciones ordenadas por título, artista, álbum, fecha y duración.</li>
+                    <li>Mostrar listas de canciones agrupadas por artista, álbum y fecha.</li>
+                    <li>Editar la información guardada de las canciones.</li>
+                    <li>Descargar canciones con una URL y reproducirlas.</li>
+                    <li>Personalizar la aplicación a través de un panel de configuración. Las opciones de configuración existentes permiten: cambiar el color de panel entre 4 colores diferentes, añadir una imagen de fondo, cambiar la opacidad del panel principal y ajustar el volumen, el tono y el reverb del reproductor. </li>
+                  </ul>
+                <p>Alt+Enter para entrar o salir de pantalla completa en Windows.</p>
+                `
+                ,
+               images:[unity1,unity2,unity3,unity4,unity5], github:"https://github.com/Julio-Souto/Reproductor-Unity" }
               })
              }
           }/>
@@ -111,11 +144,48 @@ function Body() {
               })
              }
           }/>
-          <CardComponent androidb={null} cssb={null} angularb={null} firebaseb={null} htmlb={null} javab={null} javascriptb={null} mysqlb={null} tailwindb={null} typescriptb={null} csharpb={null} unityb={null} sqliteb={null} reactb={null} phpb={null} />
-          <CardComponent htmlb={null} cssb={null} javascriptb={null}/>
-          <CardComponent htmlb={null} cssb={null} javascriptb={null}/>
-          <CardComponent csharpb={null} unityb={null} sqliteb={null} />
+          <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} image={musicdbapi1} title="Adivina el artista a partir de una Carátula" description="Pequeño minijuego de adivinar el artista dada la Carátula de un Álbum aleatoria usando TheMusicDB API" web="https://julio-souto.github.io/musidb-api-dist/" github="https://github.com/Julio-Souto/musicdb-api" onClick={
+            () => { 
+              navigate("/PaginaProyecto", {state: { title:"Adivina el artista a partir de una Carátula", description:
+                `
+                  <p>Pequeño minijuego de adivinar el artista dada la Carátula de un Álbum aleatoria haciendo fetching de datos a TheMusicDB API, usando HTML, CSS y Javascript puros</p>
+                `,
+               images:[musicdbapi1,musicdbapi2], web:"https://julio-souto.github.io/musidb-api-dist/", github:"https://github.com/Julio-Souto/musicdb-api" }
+              })
+             }
+          }/>
+          <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} tailwindb={null} image={giphyapi1} title="Buscador de Gifs usando la API de Giphy" description="Buscador de Gifs adaptable y con paginación usando la API de Giphy" web="https://julio-souto.github.io/Giphy-React-Dist/" github="https://github.com/Julio-Souto/React-Giphy-project" onClick={
+            () => { 
+              navigate("/PaginaProyecto", {state: { title:"Buscador de Gifs usando la API de Giphy", description:
+                `
+                  <p>Buscador de Gifs adaptable y con paginación haciendo fetching de datos a la API de Giphy, usando HTML, CSS, Javascript, React y Tailwind</p>
+                `,
+               images:[giphyapi1,giphyapi2,giphyapi3], web:"https://julio-souto.github.io/Giphy-React-Dist/", github:"https://github.com/Julio-Souto/React-Giphy-project" }
+              })
+             }
+          }/>
+          <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} image={githubapi} title="Buscador de Usuarios usando la API de GitHub" description="Buscador simple de Usuarios usando la API de GitHub" web="https://julio-souto.github.io/GitHub-API-Dist/" github="https://github.com/Julio-Souto/Github-Api-React" onClick={
+            () => { 
+              navigate("/PaginaProyecto", {state: { title:"Buscador de Usuarios usando la API de GitHub", description:
+                `
+                  <p>Buscador simple de Usuarios que devuelve la imagen de perfil haciendo fetching de datos a la API de GitHub, usando HTML, CSS, Javascript y React</p>
+                `,
+               images:[githubapi], web:"https://julio-souto.github.io/GitHub-API-Dist/", github:"https://github.com/Julio-Souto/Github-Api-React" }
+              })
+             }
+          }/>
+          <CardComponent htmlb={null} cssb={null} javascriptb={null} image={catclicker} title="Clicker de Gatitos" description="Minijuego Clicker de Gatitos hecho como prueba de Javascript" web="https://julio-souto.github.io/Javascript-Ejercicios/" github="https://github.com/Julio-Souto/Javascript-Ejercicios" onClick={
+            () => { 
+              navigate("/PaginaProyecto", {state: { title:"Diseño de un Componente de Calificación", description:
+                `
+                  <p>Minijuego Clicker de Gatitos hecho como prueba de Javascript usando solo HTML, CSS y Javascript puros</p>
+                `,
+               images:[catclicker], web:"https://julio-souto.github.io/Javascript-Ejercicios/", github:"https://github.com/Julio-Souto/Javascript-Ejercicios" }
+              })
+             }
+          }/>
           <VideoComponent onClick={() => {navigate("/PaginaVideo")}}/>
+          {/* <CardComponent androidb={null} cssb={null} angularb={null} firebaseb={null} htmlb={null} javab={null} javascriptb={null} mysqlb={null} tailwindb={null} typescriptb={null} csharpb={null} unityb={null} sqliteb={null} reactb={null} phpb={null} /> */}
         </div>
       </div>
     </>

@@ -20,7 +20,6 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
             <div className="flex flex-wrap items-center justify-start gap-4">
              {htmlb ?? <img className='w-10 h-10' src={html} alt="icon" /> }
              {cssb ?? <img className='w-10 h-10' src={css} alt="icon" /> }
-             {tailwindb ?? <img className='w-10 h-10' src={tailwind} alt="icon" /> }
              {androidb ?? <img className='w-10 h-10' src={android} alt="icon" /> }
              {angularb ?? <img className='w-10 h-10' src={angular} alt="icon" /> }
              {csharpb ?? <img className='w-10 h-10' src={csharp} alt="icon" /> }
@@ -29,6 +28,7 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
              {javascriptb ?? <img className='w-10 h-10' src={javascript} alt="icon" /> }
              {restb ?? <img className='w-10 h-10' src={rest} alt="icon" /> }
              {reactb ?? <img className='w-10 h-10' src={react} alt="icon" /> }
+             {tailwindb ?? <img className='w-10 h-10' src={tailwind} alt="icon" /> }
              {phpb ?? <img className='w-10 h-10' src={php} alt="icon" /> }
              {unityb ?? <img className='w-10 h-10' src={unity} alt="icon" /> }
              {mysqlb ?? <img className='w-10 h-10' src={mysql} alt="icon" /> }
