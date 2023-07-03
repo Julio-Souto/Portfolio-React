@@ -47,14 +47,14 @@ function Header() {
       <div className="flex flex-col items-center p-4 space-y-3 text-center border-2 rounded-lg lg:w-4/6 border-slate-700">
         <h1 className='text-5xl'>Julio Manuel Souto Baña</h1>
         <div className=''>
-          <h3 className='text-3xl text-slate-400' ref={transition}>{texto}</h3>
+          <h2 className='text-3xl text-slate-400' ref={transition}>{texto}</h2>
         </div>
         <div className="flex items-center self-center space-x-4">
-          <h5 className='text-xl'>Links:</h5>
+          <h3 className='text-xl'>Links:</h3>
           <div className='space-x-4'>
-            <a href="https://www.linkedin.com/in/juliomanuelsouto/" target='_blank' rel="noopener noreferrer"  className="text-xl fa-brands fa-linkedin"></a>
+            <a aria-label="Linkedin Link" href="https://www.linkedin.com/in/juliomanuelsouto/" target='_blank' rel="noopener noreferrer"  className="text-xl fa-brands fa-linkedin"></a>
             <EmailButton />
-            <a href="https://github.com/Julio-Souto" target='_blank' rel="noopener noreferrer" className='text-xl fa-brands fa-github'></a>
+            <a aria-label="Github Profile Link" href="https://github.com/Julio-Souto" target='_blank' rel="noopener noreferrer" className='text-xl fa-brands fa-github'></a>
           </div>
         </div>
       </div>

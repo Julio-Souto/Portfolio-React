@@ -7,7 +7,7 @@ function EmailButton({footer=false}) {
   return (
     <>
     <div className='relative inline-block group'>
-      <a href="mailto: julio.souto.zas@gmail.com" className='text-xl fa-solid fa-envelope tooltip'
+      <a aria-label="Email Link" href="mailto: julio.souto.zas@gmail.com" className='text-xl fa-solid fa-envelope tooltip'
       onClick={(e) => {
         e.preventDefault();
         navigator.clipboard.writeText("julio.souto.zas@gmail.com");

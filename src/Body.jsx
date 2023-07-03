@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import CardComponent from "./components/CardComponent"
-import {android1, android2, android3, articlepreview1, articlepreview2, productpreview1, productpreview2, introcomponent1, introcomponent2, introsection, ratingcomponent1, ratingcomponent2, moviesapisearch1, moviesapisearch2, moviesapisearch3, jsregexp, musicdbapi1, musicdbapi2, giphyapi1, giphyapi2, giphyapi3, githubapi, catclicker, unity1, unity2, unity3, unity4, unity5, qrcomponent2, qrcomponent1, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5} from './assets/images'
+import {android1, android2, android3, articlepreview1, articlepreview2, productpreview1, productpreview2, introcomponent1, introcomponent2, introsection, ratingcomponent1, ratingcomponent2, moviesapisearch1, moviesapisearch2, moviesapisearch3, jsregexp, musicdbapi1, musicdbapi2, giphyapi1, giphyapi2, giphyapi3, githubapi, catclicker, unity1, unity2, unity3, unity4, unity5, qrcomponent2, qrcomponent1, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, android} from './assets/images'
 // import VideoComponent from "./components/VideoComponent"
 
 function Body() {
@@ -20,7 +20,7 @@ function Body() {
               })
              }
           }/>
-          <CardComponent image={android3} title="Reproductor de Música en Android" description="Aplicacion de Android que permite reproducir archivos locales de música y gestionar listas de reproducción" androidb={null} javab={null} sqliteb={null} 
+          <CardComponent image={android} title="Reproductor de Música en Android" description="Aplicacion de Android que permite reproducir archivos locales de música y gestionar listas de reproducción" androidb={null} javab={null} sqliteb={null} 
           github="https://github.com/Julio-Souto/Reproductor-Android" onClick={
             () => { 
               navigate("/PaginaProyecto", {state: { title:"Reproductor de Música en Android", description:

@@ -38,7 +38,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 750px) {
   .nav{
     display: none;
   }
@@ -87,4 +87,11 @@
 
 .modal-image {
   display: inline-block;
+}
+
+.preview-image1{
+  max-width: 500px;
+  max-height: 700px;
+  width: auto;
+  height: auto;
 }

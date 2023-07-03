@@ -6,7 +6,7 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
     <>
       <div className="container relative max-w-sm rounded-lg shadow-lg bg-slate-800 group max-h-96" onClick={onClick}>
         <div className="flex items-center justify-center overflow-hidden rounded-t h-1/2 group-hover:opacity-10"> 
-          <img className="min-w-full min-h-full " src={image} alt="Project Image"/>
+          <img className="min-w-full min-h-full preview-image1" src={image} alt="Project Image"/>
         </div>
         <div className="px-6 py-4 h-1/2 group-hover:opacity-10">
           <div className="mb-2 text-xl font-bold">{title}</div>
@@ -39,8 +39,8 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
           <div className="flex items-center space-x-4">
             <p className='text-xl'>Links:</p>
             <div className='space-x-4'>
-              {web == "" ? null : <a href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
-              {github == "" ? null : <a href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
+              {web == "" ? null : <a aria-label="Live Website Link" href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
+              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
             </div>
           </div>
         </div>

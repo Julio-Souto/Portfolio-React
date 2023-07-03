@@ -11,6 +11,7 @@ function Nav({loggeado}) {
     top: false,
     right: false,
   });
+  const [toggleNav, setToggleNav] = useState(true)
 
   const toggleDrawer = (anchor, open) => () => {
     setState({ ...state, [anchor]: open });
@@ -66,22 +67,58 @@ function Nav({loggeado}) {
       </List>
     </Box>
   );
+  const changeNav = (e) => {
+    if(toggleNav){
+      e.target.innerHTML = '<'
+      setToggleNav(false)
+    }
+    else{
+      e.target.innerHTML = '>'
+      setToggleNav(true)
+    }
+  }
   return (
     <>
       <div className="flex items-center justify-between p-4 bg-slate-800">
         <Link to='/'><h2 className="text-2xl font-bold text-white">Portfolio</h2></Link>
+        
         <div className="space-x-3 nav">
-          <Link to='/'>Inicio</Link>
-          <div className="separator"></div>
-          <Link to='Perfil'>Perfil</Link>
-          <div className="separator"></div>
-          <Link to='Proyectos'>Proyectos</Link>
-          <div className="separator"></div>
-          {!loggeado ? <Link to='Restricted'>Modificar Experiencias</Link> : <Link to='AddReadForm'>Modificar Experiencias</Link>}
-          <div className="separator"></div>
-          <Link to='RegisterForm'>Regístrate</Link>
-          <button className='text-white' onClick={handleLogin}>{!loggeado ? <Link to='LoginForm'>Inicia Sesion</Link> : "Cerrar Sesion"}</button>
+          <button className="p-2 py-1 bg-black rounded-full" onClick={changeNav}>{'>'}</button>
+          {toggleNav ? 
+            <div className="flex items-center space-x-3">
+              <Link to='/'>Inicio</Link>
+              <div className="separator"></div>
+              <Link to='Perfil'>Perfil</Link>
+              <div className="separator"></div>
+              <Link to='Proyectos'>Proyectos</Link>
+              <div className="separator"></div>
+              {!loggeado ? <Link to='Restricted'>Modificar Experiencias</Link> : <Link to='AddReadForm'>Modificar Experiencias</Link>}
+              <div className="separator"></div>
+              <Link to='RegisterForm'>Regístrate</Link>
+              <button className='text-white' onClick={handleLogin}>{!loggeado ? <Link to='LoginForm'>Inicia Sesion</Link> : "Cerrar Sesion"}</button>
+            </div>
+          : <div>
+            <IconButton
+                sx={{padding: 0, outline: "none !important" }}
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={toggleDrawer('top', true)}
+              >
+                <MenuIcon sx={{width: "32px", height: "32px"}}/>
+              </IconButton>
+              <SwipeableDrawer
+                PaperProps={{sx: {width:"100%", height:"41%"}}}
+                anchor={'top'}
+                open={state['top']}
+                onClose={toggleDrawer('top', false)}
+                onOpen={toggleDrawer('top', true)}
+              >
+                {list('top')}
+              </SwipeableDrawer>
+          </div>}
         </div>
+        
       
         <IconButton
           id="outer-container"
