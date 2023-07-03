@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // eslint-disable-next-line react/prop-types
 function EmailButton({footer=false}) {
-  let name = footer ? " left-10" : ""
+  let name = footer ? " left-8" : ""
   return (
     <>
     <div className='relative inline-block group'>
@@ -13,7 +13,7 @@ function EmailButton({footer=false}) {
         navigator.clipboard.writeText("julio.souto.zas@gmail.com");
         toast.success("Copiado al portapapeles")
       }}></a>
-      <span className={"absolute p-2 m-4 mx-auto text-sm text-gray-100 transition-opacity -translate-x-1/2 bg-gray-800 rounded-md opacity-0 bottom-2 group-hover:opacity-100 left-1/2"+ name}>julio.souto.zas@gmail.com</span>
+      <span className={"absolute p-2 m-4 mx-auto text-sm text-gray-100 transition-opacity -translate-x-1/2 bg-gray-600 rounded-md opacity-0 bottom-2 group-hover:opacity-100 left-1/2"+ name}>julio.souto.zas@gmail.com</span>
       <ToastContainer className="inline-block" position="bottom-center" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"/>
     </div>
     </>

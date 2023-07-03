@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --toastify-color-success: #535bf2 !important;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;

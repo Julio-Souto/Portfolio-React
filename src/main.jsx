@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import Body from './Body.jsx';
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <App />,
     children: [
       {
         path: "/",
@@ -56,6 +58,10 @@ const router = createBrowserRouter([
         path: "/Perfil",
         element: <Knowledge />,
       },
+      {
+        path: '*',
+        element: <Navigate replace to="/" />
+      }
     ]
   },
   

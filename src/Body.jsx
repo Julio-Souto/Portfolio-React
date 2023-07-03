@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import CardComponent from "./components/CardComponent"
-import {android1, android2, android3, articlepreview1, articlepreview2, productpreview1, productpreview2, introcomponent1, introcomponent2, introsection, ratingcomponent1, ratingcomponent2, moviesapisearch1, moviesapisearch2, moviesapisearch3, jsregexp, musicdbapi1, musicdbapi2, giphyapi1, giphyapi2, giphyapi3, githubapi, catclicker, unity1, unity2, unity3, unity4, unity5, portfolio} from './assets/images'
-import VideoComponent from "./components/VideoComponent"
+import {android1, android2, android3, articlepreview1, articlepreview2, productpreview1, productpreview2, introcomponent1, introcomponent2, introsection, ratingcomponent1, ratingcomponent2, moviesapisearch1, moviesapisearch2, moviesapisearch3, jsregexp, musicdbapi1, musicdbapi2, giphyapi1, giphyapi2, giphyapi3, githubapi, catclicker, unity1, unity2, unity3, unity4, unity5, qrcomponent2, qrcomponent1, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5} from './assets/images'
+// import VideoComponent from "./components/VideoComponent"
 
 function Body() {
   const navigate = useNavigate()
@@ -10,13 +10,13 @@ function Body() {
       <h2 className='mt-6 text-2xl font-bold text-center'>Proyectos</h2>
       <div className='flex justify-center my-4 mb-6'>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} tailwindb={null} firebaseb={null} image={portfolio} title="Portfolio Personal usando React" description="La descripción de esta misma página" web="https://julio-souto.github.io/GitHub-API-Dist/" github="https://github.com/Julio-Souto/Github-Api-React" onClick={
+          <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} tailwindb={null} firebaseb={null} image={portfolio1} title="Portfolio Personal usando React" description="La descripción de esta misma página" web="https://julio-souto.github.io/Portfolio-React-Julio-Souto/" github="https://github.com/Julio-Souto/Portfolio-React" onClick={
             () => { 
-              navigate("/PaginaProyecto", {state: { title:"Buscador de Usuarios usando la API de GitHub", description:
+              navigate("/PaginaProyecto", {state: { title:"Portfolio Personal usando React", description:
                 `
-                  <p>Buscador simple de Usuarios que devuelve la imagen de perfil haciendo fetching de datos a la API de GitHub, usando HTML, CSS, Javascript y React</p>
+                  <p>Portfolio personal creado con Javascript, React y Tailwind, hecho como primera toma de contacto con React Router y Firebase</p>
                 `,
-               images:[portfolio], web:"https://julio-souto.github.io/GitHub-API-Dist/", github:"https://github.com/Julio-Souto/Github-Api-React" }
+               images:[portfolio1,portfolio2,portfolio3,portfolio4,portfolio5], web:"https://julio-souto.github.io/Portfolio-React-Julio-Souto/", github:"https://github.com/Julio-Souto/Portfolio-React" }
               })
              }
           }/>
@@ -174,7 +174,7 @@ function Body() {
               })
              }
           }/>
-          {/* <CardComponent htmlb={null} cssb={null} image={qrcomponent1} title="Diseño de un Componente QR" description="Vista previa del diseño de un Componente QR adaptable" web="https://julio-souto.github.io/julio-souto-qr/" github="https://github.com/Julio-Souto/julio-souto-qr" onClick={
+          <CardComponent htmlb={null} cssb={null} image={qrcomponent1} title="Diseño de un Componente QR" description="Vista previa del diseño de un Componente QR adaptable" web="https://julio-souto.github.io/julio-souto-qr/" github="https://github.com/Julio-Souto/julio-souto-qr" onClick={
             () => { 
               navigate("/PaginaProyecto", {state: { title:"Diseño de un Componente QR", description:
                 `
@@ -183,8 +183,8 @@ function Body() {
                images:[qrcomponent1,qrcomponent2], web:"https://julio-souto.github.io/julio-souto-qr/", github:"https://github.com/Julio-Souto/julio-souto-qr" }
               })
              }
-          }/> */}
-          <VideoComponent onClick={() => {navigate("/PaginaVideo")}}/>
+          }/>
+          {/* <VideoComponent onClick={() => {navigate("/PaginaVideo")}}/> */}
           {/* <CardComponent androidb={null} cssb={null} angularb={null} firebaseb={null} htmlb={null} javab={null} javascriptb={null} mysqlb={null} tailwindb={null} typescriptb={null} csharpb={null} unityb={null} sqliteb={null} reactb={null} phpb={null} /> */}
         </div>
       </div>

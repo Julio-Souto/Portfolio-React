@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import image from './assets/icons/react.svg'
 import EmailButton from './components/EmailButton'
 // import TextTransition, { presets } from 'react-text-transition'
 
@@ -41,11 +40,11 @@ function Header() {
   
   return (
     <>
-    <div className="flex flex-col p-4 lg:flex-row bg-slate-700">
-      <div className="m-auto mt-2 mb-4 lg:w-2/6 lg:my-auto">
+    <div className="flex flex-col justify-center p-4 align-middle lg:flex-row ">
+      {/* <div className="m-auto mt-2 mb-4 lg:w-2/6 lg:my-auto">
         <img src={image} alt="image" className='object-cover w-20 ml-auto'/>
-      </div>
-      <div className="flex flex-col items-center space-y-3 text-center lg:w-4/6">
+      </div> */}
+      <div className="flex flex-col items-center p-4 space-y-3 text-center border-2 rounded-lg lg:w-4/6 border-slate-700">
         <h1 className='text-5xl'>Julio Manuel Souto Baña</h1>
         <div className=''>
           <h3 className='text-3xl text-slate-400' ref={transition}>{texto}</h3>
