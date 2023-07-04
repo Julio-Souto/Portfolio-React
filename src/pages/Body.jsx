@@ -11,18 +11,20 @@ function Body() {
       <div className='flex justify-center my-4 mb-6'>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} tailwindb={null} firebaseb={null} image={portfolio1} title="Portfolio Personal usando React" description="La descripción de esta misma página" web="https://julio-souto.github.io/Portfolio-React-Julio-Souto/" github="https://github.com/Julio-Souto/Portfolio-React" onClick={
-            () => { 
-              navigate("/PaginaProyecto", {state: { title:"Portfolio Personal usando React", description:
-                `
-                  <p>Portfolio personal creado con Javascript, React y Tailwind, hecho como primera toma de contacto con React Router y Firebase</p>
-                `,
-               images:[portfolio1,portfolio2,portfolio3,portfolio4,portfolio5], web:"https://julio-souto.github.io/Portfolio-React-Julio-Souto/", github:"https://github.com/Julio-Souto/Portfolio-React" }
-              })
+            (e) => { 
+              if(e.target.tagName!=="A")
+                navigate("/PaginaProyecto", {state: { title:"Portfolio Personal usando React", description:
+                  `
+                    <p>Portfolio personal creado con Javascript, React y Tailwind, hecho como primera toma de contacto con React Router y Firebase</p>
+                  `,
+                images:[portfolio1,portfolio2,portfolio3,portfolio4,portfolio5], web:"https://julio-souto.github.io/Portfolio-React-Julio-Souto/", github:"https://github.com/Julio-Souto/Portfolio-React" }
+                })
              }
           }/>
           <CardComponent image={android} title="Reproductor de Música en Android" description="Aplicacion de Android que permite reproducir archivos locales de música y gestionar listas de reproducción" androidb={null} javab={null} sqliteb={null} 
           github="https://github.com/Julio-Souto/Reproductor-Android" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Reproductor de Música en Android", description:
                 `
                   <p>La aplicación consiste en un reproductor de música que reproduce archivos existentes en el dispositivo y permite descargar canciones a partir de una URL. Todas las funcionalidades de la aplicación son:</p>
@@ -42,7 +44,8 @@ function Body() {
              }
           }/>
           <CardComponent csharpb={null} unityb={null} sqliteb={null} image={unity1} title="Reproductor de música en Unity" description="Aplicacion de Unity que permite reproducir archivos locales de música y gestionar listas de reproducción" github="https://github.com/Julio-Souto/Reproductor-Unity" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Reproductor de música en Unity", description:
                 `
                 <p>La aplicación consiste en un reproductor de música que reproduce archivos existentes en el dispositivo y permite descargar canciones a partir de una URL. Todas las funcionalidades de la aplicación son:</p>
@@ -65,7 +68,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} tailwindb={null} image={giphyapi1} title="Buscador de Gifs usando la API de Giphy" description="Buscador de Gifs adaptable y con paginación usando la API de Giphy" web="https://julio-souto.github.io/Giphy-React-Dist/" github="https://github.com/Julio-Souto/React-Giphy-project" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Buscador de Gifs usando la API de Giphy", description:
                 `
                   <p>Buscador de Gifs adaptable y con paginación haciendo fetching de datos a la API de Giphy, usando HTML, CSS, Javascript, React y Tailwind</p>
@@ -75,7 +79,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} image={musicdbapi1} title="Adivina el artista a partir de una Carátula" description="Pequeño minijuego de adivinar el artista dada la Carátula de un Álbum aleatoria usando TheMusicDB API" web="https://julio-souto.github.io/musidb-api-dist/" github="https://github.com/Julio-Souto/musicdb-api" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Adivina el artista a partir de una Carátula", description:
                 `
                   <p>Pequeño minijuego de adivinar el artista dada la Carátula de un Álbum aleatoria haciendo fetching de datos a TheMusicDB API, usando HTML, CSS y Javascript puros</p>
@@ -85,7 +90,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} image={moviesapisearch2} title="Buscador de películas usando una API" description="Buscador de películas adaptable usando la OMDB API" web="https://julio-souto.github.io/-Movies-API-Search-Dist/" github="https://github.com/Julio-Souto/Movies-API-Search" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Buscador de películas usando una API", description:
                 `
                   <p>Buscador de películas adaptable haciendo fetching de datos a la API de OMDB con paginación, usando HTML, CSS y Javascript puros</p>
@@ -95,7 +101,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} image={githubapi} title="Buscador de Usuarios usando la API de GitHub" description="Buscador simple de Usuarios usando la API de GitHub" web="https://julio-souto.github.io/GitHub-API-Dist/" github="https://github.com/Julio-Souto/Github-Api-React" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Buscador de Usuarios usando la API de GitHub", description:
                 `
                   <p>Buscador simple de Usuarios que devuelve la imagen de perfil haciendo fetching de datos a la API de GitHub, usando HTML, CSS, Javascript y React</p>
@@ -105,7 +112,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null} image={jsregexp} title="Validación de formularios con expresiones regulares" description="Validación de campos de un formulario usando expresiones regulares" web="https://julio-souto.github.io/Javascript-ExpresionesRegulares/" github="https://github.com/Julio-Souto/Javascript-ExpresionesRegulares" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Validación de formularios con expresiones regulares", description:
                 `
                   <p>Página de prueba para la validación de formularios usando expresiones regulares y HTML, CSS y Javascript puros</p>
@@ -115,7 +123,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null} image={catclicker} title="Clicker de Gatitos" description="Minijuego Clicker de Gatitos hecho como prueba de Javascript" web="https://julio-souto.github.io/Javascript-Ejercicios/" github="https://github.com/Julio-Souto/Javascript-Ejercicios" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Diseño de un Componente de Calificación", description:
                 `
                   <p>Minijuego Clicker de Gatitos hecho como prueba de Javascript usando solo HTML, CSS y Javascript puros</p>
@@ -125,7 +134,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} javascriptb={null} image={ratingcomponent1} title="Diseño de un Componente de Calificación" description="Vista previa del diseño de un Componente de Calificación adaptable" web="https://julio-souto.github.io/interactive-rating-component/" github="https://github.com/Julio-Souto/interactive-rating-component" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Diseño de un Componente de Calificación", description:
                 `
                   <p>Vista previa del diseño de un Componente de Calificación adaptable hecho a partir de un desafio de FrontEnd Mentor usando solo HTML, CSS y Javascript puros</p>
@@ -135,7 +145,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} image={introcomponent1} title="Diseño de una Página de Registro" description="Vista previa del diseño de una Página de Registro adaptable" web="https://julio-souto.github.io/intro-component/" github="https://github.com/Julio-Souto/intro-component" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Diseño de una Página de Registro", description:
                 `
                   <p>Vista previa del diseño de una Página de Registro adaptable hecha a partir de un desafio de FrontEnd Mentor usando solo HTML y CSS puros</p>
@@ -145,7 +156,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} image={introsection} title="Diseño de una Página de Inicio" description="Vista previa del diseño de una Página de Inicio" web="https://julio-souto.github.io/intro-section/" github="https://github.com/Julio-Souto/intro-section" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Diseño de una Página de Inicio", description:
                 `
                   <p>Vista previa del diseño de una Página de Inicio hecha a partir de un desafio de FrontEnd Mentor usando solo HTML y CSS puros</p>
@@ -155,7 +167,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} image={productpreview1} title="Diseño de un Componente Producto" description="Vista previa del diseño de un Componente Producto adaptable" web="https://julio-souto.github.io/product-preview/" github="https://github.com/Julio-Souto/product-preview" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Diseño de un Componente Producto", description:
                 `
                   <p>Vista previa del diseño de un Componente Producto adaptable hecho a partir de un desafio de FrontEnd Mentor usando solo HTML y CSS puros</p>
@@ -165,7 +178,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} image={articlepreview1} title="Diseño de un Componente Artículo" description="Vista previa del diseño de un Componente Artículo adaptable" web="https://julio-souto.github.io/article-preview/" github="https://github.com/Julio-Souto/article-preview" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Diseño de un Componente Artículo", description:
                 `
                   <p>Vista previa del diseño de un Componente Artículo adaptable hecho a partir de un desafio de FrontEnd Mentor usando solo HTML y CSS puros</p>
@@ -175,7 +189,8 @@ function Body() {
              }
           }/>
           <CardComponent htmlb={null} cssb={null} image={qrcomponent1} title="Diseño de un Componente QR" description="Vista previa del diseño de un Componente QR adaptable" web="https://julio-souto.github.io/julio-souto-qr/" github="https://github.com/Julio-Souto/julio-souto-qr" onClick={
-            () => { 
+            (e) => { 
+              if(e.target.tagName!=="A")
               navigate("/PaginaProyecto", {state: { title:"Diseño de un Componente QR", description:
                 `
                   <p>Vista previa del diseño de un Componente QR adaptable hecho a partir de un desafio de FrontEnd Mentor usando solo HTML y CSS puros</p>

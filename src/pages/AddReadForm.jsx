@@ -5,6 +5,7 @@ import ErrorMessage from '../components/ErrorMessage'
 import { addDoc, collection, deleteDoc, doc, getDocs, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../App'
+import { ToastContainer, toast } from 'react-toastify'
 
 // eslint-disable-next-line react/prop-types
 function AddReadForm() {
@@ -12,6 +13,7 @@ function AddReadForm() {
   const [description, setDescription] = useState("descripcion")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const [loading2, setLoading2] = useState(false)
   const [experiencias, setExperiencias] = useState([])
   const [edit, setEdit] = useState("Añadir")
   const [id, setId] = useState("")
@@ -26,12 +28,15 @@ function AddReadForm() {
       });
       setExperiencias(copy)
       console.log(experiencias)
+      setLoading2(false)
     } catch (error) {
       setError(error.message)
     }
   }
   useEffect(() => {
+    setLoading2(true)
     getter()
+    
   }, [])
 
   useEffect(() => {
@@ -69,7 +74,9 @@ function AddReadForm() {
     try {
       await deleteDoc(doc(db,"prueba",id))
       getter()
+      reset()
       setError("")
+      toast.success("Elemento eliminado")
     } catch (error) {
       setError(error.message)
     }
@@ -89,6 +96,12 @@ function AddReadForm() {
     } catch (error) {
       setError(error.message)
     }
+  }
+  const reset = () => {
+    setEdit("Añadir"); 
+    setName("experiencia"); 
+    setDescription("descripcion"); 
+    setId("")
   }
   return (
     <>
@@ -115,6 +128,7 @@ function AddReadForm() {
         <div className='mx-auto mb-4 text-center sm:mt-8'>
           <h2 className='text-2xl font-bold text-center'>Experiencias</h2>
           <ul className='mt-2 list-disc'>
+            { loading2 ? <LoadingSpinner /> : null }
             {experiencias != null ? experiencias.map((item) => 
               <li key={item.id} className='flex items-center'><span onClick={() => {setEdit("Editar");editForm(item)}}>{"• "+item.name+" - "+item.description}</span><button className='p-0 mt-1 ml-2 text-right outline-none bg-inherit' 
               onClick={() => deleteDocument(item.id)}>
@@ -124,8 +138,9 @@ function AddReadForm() {
             </button></li>
             ) : <p>No se han podido encontrar experiencias</p>}
           </ul>
-          <button className='mt-2' onClick={() => {setEdit("Añadir"); setName("experiencia"); setDescription("descripcion"); setId("")}}>Añadir</button>
+          <button className='mt-2' onClick={reset}>Añadir</button>
         </div>
+        <ToastContainer className="inline-block" position="bottom-center" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"/>
       </div>
     </>
   )

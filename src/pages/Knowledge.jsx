@@ -6,7 +6,7 @@ function Knowledge() {
     <>
       <div>
         <h2 className="mt-6 text-2xl font-bold text-center">Perfil</h2>
-        <div className='py-4 space-y-4 px-28'>
+        <div className='w-9/12 py-4 mx-auto space-y-4'>
           <p>Graduado en Desarrollo de Aplicaciones Multiplataforma, con formación académica focalizada en el desarrollo de Software con Java, C#, SQL y herramientas de Programación Web utilizando plataformas como Visual Studio, Intellij y Eclipse.</p>
 
           <p>Siempre afronto los nuevos retos con curiosidad y creatividad, buscando nuevas formas de resolver problemas para descubrir la más óptima y eficiente y aprender todo lo posible durante el proceso.</p>
