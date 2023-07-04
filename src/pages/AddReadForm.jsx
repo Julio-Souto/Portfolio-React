@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react'
-import { db } from './firebase'
-import LoadingSpinner from './components/LoadingSpinner'
-import ErrorMessage from './components/ErrorMessage'
+import { useContext, useEffect, useState } from 'react'
+import { db } from '../firebase/firebase'
+import LoadingSpinner from '../components/LoadingSpinner'
+import ErrorMessage from '../components/ErrorMessage'
 import { addDoc, collection, deleteDoc, doc, getDocs, serverTimestamp, updateDoc } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../App'
 
 // eslint-disable-next-line react/prop-types
 function AddReadForm() {
@@ -13,7 +15,8 @@ function AddReadForm() {
   const [experiencias, setExperiencias] = useState([])
   const [edit, setEdit] = useState("Añadir")
   const [id, setId] = useState("")
-
+  const user = useContext(UserContext)
+  const navigate = useNavigate()
   const getter = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "prueba"));
@@ -30,6 +33,12 @@ function AddReadForm() {
   useEffect(() => {
     getter()
   }, [])
+
+  useEffect(() => {
+    if(!user)
+      navigate('/Restricted')
+  }, [user])
+  
   
   const handleSubmit = async (e) => {
     e.preventDefault()

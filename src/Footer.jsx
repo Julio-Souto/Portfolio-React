@@ -10,7 +10,7 @@ function Footer() {
           <a aria-label="Github Profile Link" href="https://github.com/Julio-Souto" target='_blank' rel="noopener noreferrer" className='text-xl fa-brands fa-github'></a>
         </div>
         <div className="p-2 rounded-lg bg-slate-800">
-          <p className="font-bold">Julio Manuel Souto Baña</p>
+          <p className="font-bold text-white">Julio Manuel Souto Baña</p>
         </div>
       </div>
     </>

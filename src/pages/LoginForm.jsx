@@ -1,42 +1,44 @@
-import { useEffect, useState } from 'react'
-import { auth } from './firebase'
-import { createUserWithEmailAndPassword, signOut } from 'firebase/auth'
-import LoadingSpinner from './components/LoadingSpinner'
-import ErrorMessage from './components/ErrorMessage'
+import { useState } from 'react'
+import { auth } from '../firebase/firebase'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import LoadingSpinner from '../components/LoadingSpinner'
+import ErrorMessage from '../components/ErrorMessage'
 import { useNavigate } from 'react-router-dom'
-import WarningMessage from './components/WarningMessage'
 
 // eslint-disable-next-line react/prop-types
-function RegisterForm() {
+function LoginForm() {
   const [user, setUser] = useState("example@example.com")
   const [password, setPassword] = useState("abc123.")
+  // const [login, setLogin] = useState(null)
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
 
   const navigate = useNavigate()
+  // useEffect(() => {
+    // if(localStorage.getItem('user') != "")
+    //   setLogin(JSON.parse(localStorage.getItem('user')))
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       setLogin(user)
+  //     }
+  //   });
+  // }, [])
 
-  useEffect(() => {
-    signOut(auth)
-      .then(() => {
-        
-      })
-      .catch((error) => {
-        console.log(error.message)
-      })
-  }, [])
-  
   const handleSignIn = (e) => {
     e.preventDefault()
     let user = e.target.user.value.trim()
     let pass = e.target.pass.value.trim()
+    // if(login == null){
       if(user !="" && pass !=""){
         setLoading(true)
-        createUserWithEmailAndPassword(auth,user,pass)
+        signInWithEmailAndPassword(auth,user,pass)
           .then((credential) => {
             console.log(credential.user)
+            // setLogin(credential.user)
             setError("")
             setLoading(false)
-
+            
+            // localStorage.setItem('user',JSON.stringify(credential.user))
           })
           .then(() => navigate("/"))
           .catch((error) => {
@@ -44,13 +46,13 @@ function RegisterForm() {
             setLoading(false)
           })
       }
+    // }
   }
   return (
     <>
-      <div className='space-y-4 login-container justify-stretch'>
-        <h2 className='text-2xl font-bold text-center'>Regístrate</h2>
+      <div className='space-y-4 login-container'>
+        <h2 className='text-2xl font-bold text-center'>Inicia Sesion</h2>
         { error != "" ? <ErrorMessage error={error} /> : null }
-        <WarningMessage warning={"Esto solo es una aplicación de prueba! No introduzcas datos reales"} />
         <form action="#" onSubmit={handleSignIn}>
           <fieldset className='flex flex-col p-4 space-y-4 text-left border-2 rounded-md w-96 border-slate-500'>
             <div className='flex flex-col space-y-2'>
@@ -63,6 +65,7 @@ function RegisterForm() {
               <input className='p-2 rounded-md' type="password" name='pass' id='pass' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <button>Entrar</button>
+            {/* {login != null ? <p>Usuario loggeado: {login.email}</p> : <p>Usuario desloggeado</p>} */}
           </fieldset>
         </form>
         { loading ? <LoadingSpinner /> : null }
@@ -71,4 +74,4 @@ function RegisterForm() {
   )
 }
 
-export default RegisterForm
+export default LoginForm

@@ -1,6 +1,6 @@
 import { signOut } from "firebase/auth"
 import { Link } from "react-router-dom"
-import { auth } from "./firebase"
+import { auth } from "./firebase/firebase"
 import { Box, IconButton, List, ListItem, ListItemButton, SwipeableDrawer } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from "react"
@@ -83,7 +83,7 @@ function Nav({loggeado}) {
         <Link to='/'><h2 className="text-2xl font-bold text-white">Portfolio</h2></Link>
         
         <div className="space-x-3 nav">
-          <button className="p-2 py-1 bg-black rounded-full" onClick={changeNav}>{'>'}</button>
+          <button className="p-2 py-1 rounded-full" onClick={changeNav}>{'>'}</button>
           {toggleNav ? 
             <div className="flex items-center space-x-3">
               <Link to='/'>Inicio</Link>

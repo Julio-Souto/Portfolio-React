@@ -9,7 +9,7 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
           <img className="min-w-full min-h-full preview-image1" src={image} alt="Project Image"/>
         </div>
         <div className="px-6 py-4 h-1/2 group-hover:opacity-10">
-          <div className="mb-2 text-xl font-bold">{title}</div>
+          <div className="mb-2 text-xl font-bold text-white">{title}</div>
           <p className="text-base text-gray-400">
             {description}
           </p>

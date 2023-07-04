@@ -7,14 +7,14 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import Body from './Body.jsx';
-import RegisterForm from './RegisterForm.jsx';
-import LoginForm from './LoginForm.jsx';
-import ProjectPage from './components/ProjectPage.jsx';
-import Knowledge from './Knowledge.jsx';
-import AddReadForm from './AddReadForm.jsx';
-import VideoPage from './components/VideoPage.jsx';
-import RestrictedAccess from './components/RestrictedAccess.jsx';
+import Body from './pages/Body.jsx';
+import RegisterForm from './pages/RegisterForm.jsx';
+import LoginForm from './pages/LoginForm.jsx';
+import ProjectPage from './pages/ProjectPage.jsx';
+import Knowledge from './pages/Knowledge.jsx';
+import AddReadForm from './pages/AddReadForm.jsx';
+import VideoPage from './pages/VideoPage.jsx';
+import RestrictedAccess from './pages/RestrictedAccess.jsx';
 
 const url = window.location.pathname
 const router = createBrowserRouter([

@@ -1,5 +1,5 @@
-import { android, angular, csharp, css, firebase, html, java, javascript, mysql, php, react, sqlite, unity, tailwind, npm, rest } from './assets/icons'
-import CardSmall from './components/CardSmall'
+import { android, angular, csharp, css, firebase, html, java, javascript, mysql, php, react, sqlite, unity, tailwind, npm, rest } from '../assets/icons'
+import CardSmall from '../components/CardSmall'
 
 function Knowledge() {
   return (
