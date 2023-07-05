@@ -13,7 +13,7 @@ import LoginForm from './pages/LoginForm.jsx';
 import ProjectPage from './pages/ProjectPage.jsx';
 import Knowledge from './pages/Knowledge.jsx';
 import AddReadForm from './pages/AddReadForm.jsx';
-import VideoPage from './pages/VideoPage.jsx';
+// import VideoPage from './pages/VideoPage.jsx';
 import RestrictedAccess from './pages/RestrictedAccess.jsx';
 
 const url = window.location.pathname
@@ -43,10 +43,10 @@ const router = createBrowserRouter([
         path: "/PaginaProyecto",
         element: <ProjectPage />,
       },
-      {
-        path: "/PaginaVideo",
-        element: <VideoPage />,
-      },
+      // {
+      //   path: "/PaginaVideo",
+      //   element: <VideoPage />,
+      // },
       {
         path: "/AddReadForm",
         element: <AddReadForm />,
