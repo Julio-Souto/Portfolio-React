@@ -29,12 +29,12 @@ function ProjectPage() {
             <div className='mr-12 space-x-4'>
               <span className="text-xl">Links: </span>
               {web == "" ? null : <a aria-label="Live Website Link" href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
-              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
+              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa fa-github' target="_blank" rel="noopener noreferrer"></a>}
             </div>
           </div>
           <div className="container space-y-4" dangerouslySetInnerHTML={{__html:description}}></div>
         </div>
-        <div className="flex px-12 h-96">
+        <div className="flex justify-center px-12 h-96">
           <div className="flex justify-between gap-2 overflow-auto">
             {images.map((image, index) => 
               <img className="max-w-3xl mx-auto " key={index} src={image} alt={"Project Image "+image} onClick={() => handleImage(image)}/>

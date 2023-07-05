@@ -40,7 +40,7 @@ function CardComponent({image = "http://placekitten.com/500/500", title = "Title
             <p className='text-xl'>Links:</p>
             <div className='space-x-4'>
               {web == "" ? null : <a aria-label="Live Website Link" href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
-              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
+              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa fa-github' target="_blank" rel="noopener noreferrer"></a>}
             </div>
           </div>
         </div>
