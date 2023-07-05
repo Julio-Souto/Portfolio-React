@@ -18,6 +18,7 @@
     "@stichiboi/react-elegant-mouse-trail": "^0.1.8",
     "animated-grid-lines": "^1.0.2",
     "firebase": "^9.22.2",
+    "font-awesome": "^4.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.13.0",

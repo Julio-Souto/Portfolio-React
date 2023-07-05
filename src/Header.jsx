@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import EmailButton from './components/EmailButton'
-// import TextTransition, { presets } from 'react-text-transition'
+import 'font-awesome/css/font-awesome.css';
 
 function Header() {
   const [texto, setTexto] = useState("Desarrollador Web Front-End")
@@ -52,9 +52,9 @@ function Header() {
         <div className="flex items-center self-center space-x-4">
           <h3 className='text-xl'>Links:</h3>
           <div className='space-x-4'>
-            <a aria-label="Linkedin Link" href="https://www.linkedin.com/in/juliomanuelsouto/" target='_blank' rel="noopener noreferrer"  className="text-xl fa-brands fa-linkedin"></a>
+            <a aria-label="Linkedin Link" href="https://www.linkedin.com/in/juliomanuelsouto/" target='_blank' rel="noopener noreferrer"  className="text-xl fa fa-linkedin"></a>
             <EmailButton />
-            <a aria-label="Github Profile Link" href="https://github.com/Julio-Souto" target='_blank' rel="noopener noreferrer" className='text-xl fa-brands fa-github'></a>
+            <a aria-label="Github Profile Link" href="https://github.com/Julio-Souto" target='_blank' rel="noopener noreferrer" className='text-xl fa fa-github'></a>
           </div>
         </div>
       </div>
