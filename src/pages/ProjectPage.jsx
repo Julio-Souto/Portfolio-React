@@ -34,8 +34,8 @@ function ProjectPage() {
           </div>
           <div className="container space-y-4" dangerouslySetInnerHTML={{__html:description}}></div>
         </div>
-        <div className="flex justify-center px-12 h-96">
-          <div className="flex justify-between gap-2 overflow-auto">
+        <div className="flex justify-center px-0 md:px-12 h-96">
+          <div className="flex justify-between gap-2 overflow-x-auto overflow-y-hidden">
             {images.map((image, index) => 
               <img className="max-w-3xl mx-auto " key={index} src={image} alt={"Project Image "+image} onClick={() => handleImage(image)}/>
             )}
@@ -44,7 +44,7 @@ function ProjectPage() {
       </div>
       <div ref={imageRef} className="modal">
         <div onClick={hideImage} className="modal-content">
-          <img src={image} alt={"Project Image "+image} />
+          <img className="modal-image" src={image} alt={"Project Image "+image} />
         </div>
       </div>
 
