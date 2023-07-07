@@ -14,7 +14,7 @@ function EmailButton({footer=false}) {
         toast.success("Copiado al portapapeles")
       }}></a>
       <span className={"absolute p-2 m-4 mx-auto text-sm text-gray-100 transition-opacity -translate-x-1/2 bg-gray-600 rounded-md opacity-0 bottom-2 group-hover:opacity-100 left-1/2"+ name}>julio.souto.zas@gmail.com</span>
-      <ToastContainer className="inline-block" position="bottom-center" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"/>
+      <ToastContainer className="inline-block" position="bottom-center" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover={false} theme="dark"/>
     </div>
     </>
   )

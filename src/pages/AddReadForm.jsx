@@ -5,7 +5,7 @@ import ErrorMessage from '../components/ErrorMessage'
 import { addDoc, collection, deleteDoc, doc, getDocs, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../App'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 
 // eslint-disable-next-line react/prop-types
 function AddReadForm() {
@@ -140,7 +140,6 @@ function AddReadForm() {
           </ul>
           <button className='mt-2' onClick={reset}>Añadir</button>
         </div>
-        <ToastContainer className="inline-block" position="bottom-center" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"/>
       </div>
     </>
   )
