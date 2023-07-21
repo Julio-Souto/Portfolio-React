@@ -28,6 +28,17 @@ function App() {
     });
   }, [])
 
+  // Detect if mobile
+  // var hasTouchScreen = false;
+
+  // if ("maxTouchPoints" in navigator) {
+  //     hasTouchScreen = navigator.maxTouchPoints > 0;
+  // } 
+  
+  // if (hasTouchScreen) {
+  //     // Device is likely mobile, so do stuff for mobile devices here.
+  // }
+  
   return (
     <>
       <UserContext.Provider value={login}>
