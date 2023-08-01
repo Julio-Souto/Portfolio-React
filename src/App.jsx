@@ -26,14 +26,14 @@ function App() {
         setLogin(null)
         setLoggeado(false)
       }
+
+    // Detect if mobile
+
+    if ("maxTouchPoints" in navigator) 
+      setMobile(navigator.maxTouchPoints > 0)
+
     });
   }, [])
-
-  // Detect if mobile
-
-  if ("maxTouchPoints" in navigator) 
-      setMobile(navigator.maxTouchPoints > 0)
-  
   
   return (
     <>
