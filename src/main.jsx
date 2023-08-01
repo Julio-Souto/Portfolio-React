@@ -17,7 +17,6 @@ import AddReadForm from './pages/AddReadForm.jsx';
 // import VideoPage from './pages/VideoPage.jsx';
 import RestrictedAccess from './pages/RestrictedAccess.jsx';
 
-const url = window.location.pathname
 // const router = createBrowserRouter([
 const router = createHashRouter([
   {
@@ -68,7 +67,7 @@ const router = createHashRouter([
     ]
   },
   
-], {basename: url});
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
