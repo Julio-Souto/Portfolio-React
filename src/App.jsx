@@ -12,6 +12,7 @@ export const UserContext = createContext()
 function App() {
   const [loggeado, setLoggeado] = useState(false)
   const [login, setLogin] = useState(null)
+  const [mobile, setMobile] = useState(false)
 
   useEffect(() => {
     // if(localStorage.getItem('user') != "")
@@ -29,20 +30,15 @@ function App() {
   }, [])
 
   // Detect if mobile
-  // var hasTouchScreen = false;
 
-  // if ("maxTouchPoints" in navigator) {
-  //     hasTouchScreen = navigator.maxTouchPoints > 0;
-  // } 
+  if ("maxTouchPoints" in navigator) 
+      setMobile(navigator.maxTouchPoints > 0)
   
-  // if (hasTouchScreen) {
-  //     // Device is likely mobile, so do stuff for mobile devices here.
-  // }
   
   return (
     <>
       <UserContext.Provider value={login}>
-        <MouseTrail strokeColor='#413cff' lag={0.7} lineDuration={30} lineWidthStart={10} />
+        {mobile ? null : <MouseTrail strokeColor='#413cff' lag={0.7} lineDuration={30} lineWidthStart={10} />}
         <Nav loggeado={loggeado}/>
         <div className='flex flex-col'>
           <Header />

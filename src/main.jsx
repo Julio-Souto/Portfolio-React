@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import {
-  createBrowserRouter,
-  //createHashRouter,
+  // createBrowserRouter,
+  createHashRouter,
   Navigate,
   RouterProvider,
 } from "react-router-dom";
@@ -18,8 +18,8 @@ import AddReadForm from './pages/AddReadForm.jsx';
 import RestrictedAccess from './pages/RestrictedAccess.jsx';
 
 const url = window.location.pathname
-//const router = createHashRouter([
-const router = createBrowserRouter([
+// const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
