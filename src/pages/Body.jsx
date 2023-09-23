@@ -8,7 +8,7 @@ function Body() {
   const navigate = useNavigate()
   return (
     <>
-      <h2 className='mt-6 text-2xl font-bold text-center'>Proyectos</h2>
+      <h2 className='mt-6 text-4xl font-bold text-center'>Proyectos</h2>
       <div className='flex justify-center my-4 mb-6'>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <CardComponent htmlb={null} cssb={null} javascriptb={null} restb={null} reactb={null} tailwindb={null} firebaseb={null} image={portfolio1} title="Portfolio Personal usando React" description="La descripción de esta misma página" web="https://julio-souto.github.io/Portfolio-React-Julio-Souto/" github="https://github.com/Julio-Souto/Portfolio-React" onClick={
