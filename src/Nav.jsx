@@ -190,7 +190,7 @@ function Nav({loggeado}) {
         </div> */}
         
         <div className="space-x-3 nav">
-          <button className="p-2 py-4 rounded-full fa fa-angle-right fa-lg" onClick={changeNav}></button>
+          <button className="p-2 py-4 rounded-full fa fa-angle-right fa-lg" title="Contraer" onClick={changeNav}></button>
           {toggleNav ? 
             <div className="flex items-center space-x-3">
               <Link to='/'><i className="fa fa-home mr-1"></i> Inicio</Link>
@@ -211,7 +211,7 @@ function Nav({loggeado}) {
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
               >
-                <img src={firebase} className="w-6 pl-0 mr-1"/>Firebase
+                <img src={firebase} className="w-6 pl-0 mr-1" alt="Firebase"/>Firebase
               </Button>
               <StyledMenu
                 id="demo-customized-menu"
