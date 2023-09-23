@@ -72,7 +72,7 @@ function Nav({loggeado}) {
         <ListItem key={"CV"} disablePadding onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}>
           <ListItemButton sx={{padding: 0 ,'&:hover':{backgroundColor: "#333333"}}}>
-            <a className="w-full px-5 py-2 hover:text-[#9499ff] text-[#646cff]" href="/assets/Julio-Souto-CV-Corto.pdf" target='_blank' rel='noopener noreferrer'><i className="fa fa-address-card mr-2"></i>CV</a>
+            <a className="w-full px-5 py-2 hover:text-[#9499ff] text-[#646cff]" href="/Portfolio-React-Julio-Souto/assets/Julio-Souto-CV-Corto.pdf" target='_blank' rel='noopener noreferrer'><i className="fa fa-address-card mr-2"></i>CV</a>
           </ListItemButton>
         </ListItem>
         <ListItemButton onClick={handleClickDR} sx={{paddingLeft:"1em", paddingY:".2em" , '&:hover':{backgroundColor: "#333333"}}}>
@@ -199,7 +199,7 @@ function Nav({loggeado}) {
               <Divider orientation="vertical" flexItem sx={{ bgcolor: "#e2e2e2" }} />
               <Link to='Proyectos'><i className="fa fa-code mr-1"></i> Proyectos</Link>
               <Divider orientation="vertical" flexItem sx={{ bgcolor: "#e2e2e2" }} />
-              <a href="/assets/Julio-Souto-CV-Corto.pdf" target='_blank' rel='noopener noreferrer' className="hover:text-[#9499ff] text-[#646cff]"><i className="fa fa-address-card mr-1"></i> CV</a>
+              <a href="/Portfolio-React-Julio-Souto/assets/Julio-Souto-CV-Corto.pdf" target='_blank' rel='noopener noreferrer' className="hover:text-[#9499ff] text-[#646cff]"><i className="fa fa-address-card mr-1"></i> CV</a>
               <Button
                 id="demo-customized-button"
                 aria-controls={open ? 'demo-customized-menu' : undefined}
