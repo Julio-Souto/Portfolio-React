@@ -29,7 +29,7 @@ function ProjectPage() {
             <div className='mr-12 space-x-4'>
               <span className="text-xl">Links: </span>
               {web == "" ? null : <a aria-label="Live Website Link" href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
-              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa fa-github' target="_blank" rel="noopener noreferrer"></a>}
+              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
             </div>
           </div>
           <div className="container space-y-4" dangerouslySetInnerHTML={{__html:description}}></div>
