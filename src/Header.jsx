@@ -10,7 +10,7 @@ function Header() {
       {/* <div className="m-auto mt-2 mb-4 lg:w-2/6 lg:my-auto">
         <img src={image} alt="image" className='object-cover w-20 ml-auto'/>
       </div> */}
-      <div className="flex flex-col items-center p-4 space-y-3 text-center rounded-lg lg:w-4/6 bg-[#121212]">
+      <div className="flex flex-col items-center p-4 space-y-3 text-center rounded-lg lg:w-4/6 bg-[#111]">
         <h1 className='text-5xl'>Julio Manuel Souto Baña</h1>
         <div className=''>
           <h2 className='text-3xl text-slate-400'>Desarrollador de Software</h2>

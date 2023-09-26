@@ -11,7 +11,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  background: rgb(36,26,33);
+  background: linear-gradient(90deg, rgba(36,26,33,1) 0%, rgba(37,24,41,1) 50%, rgba(38,17,45,1) 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -49,7 +50,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #111;
   cursor: pointer;
   transition: border-color 0.25s;
 }

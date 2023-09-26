@@ -28,8 +28,10 @@ function ProjectPage() {
             <h2 className="mb-4 text-2xl font-bold underline">{title}</h2>
             <div className='mr-12 space-x-4'>
               <span className="text-xl">Links: </span>
-              {web == "" ? null : <a aria-label="Live Website Link" href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
-              {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
+              <div className="space-x-4 inline-block">
+                {web == "" ? null : <a aria-label="Live Website Link" href={web} className='text-xl fa fa-globe' target="_blank" rel="noopener noreferrer"></a>}
+                {github == "" ? null : <a aria-label="Github Repository Link" href={github} className='text-xl fa-brands fa-github' target="_blank" rel="noopener noreferrer"></a>}
+              </div>
             </div>
           </div>
           <div className="container space-y-4" dangerouslySetInnerHTML={{__html:description}}></div>

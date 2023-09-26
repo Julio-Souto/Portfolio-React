@@ -97,7 +97,7 @@ function Nav({loggeado}) {
           <ListItem key={"Inicia Sesion"} disablePadding onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}>
             <ListItemButton sx={{'&:hover':{backgroundColor: "#333333"}}}>
-            {!loggeado ? <Link to='LoginForm' className="w-full"><button className='text-white hover:text-[#535bf2] w-full' onClick={handleLogin}>Inicia Sesion</button></Link> : <button className='text-white hover:text-[#535bf2]' onClick={handleLogin}>Cerrar Sesion</button>}
+            {!loggeado ? <Link to='LoginForm' className="w-full"><button className='text-white hover:text-[#535bf2] w-full' onClick={handleLogin}>Inicia Sesion</button></Link> : <button className='text-white hover:text-[#535bf2] w-full' onClick={handleLogin}>Cerrar Sesion</button>}
             </ListItemButton>
           </ListItem>
         </List>
