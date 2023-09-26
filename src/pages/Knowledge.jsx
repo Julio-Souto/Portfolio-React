@@ -7,7 +7,7 @@ function Knowledge() {
       <div>
         <h2 className="mt-6 text-4xl font-bold text-center">Perfil</h2>
         <div className='w-full flex justify-around flex-col lg:flex-row p-4'>
-          <div className='bg-[#111] rounded-lg w-full lg:w-[45%] p-6 flex items-start space-x-4'>
+          <div className='bg-black rounded-lg w-full lg:w-[45%] p-6 flex items-start space-x-4'>
             <div className='pt-2 text-green-600'><i className="fa-solid fa-mobile-screen fa-2xl text-6xl"></i></div>
             <div>
               <h3 className='text-2xl font-bold'>Desarrollador de Aplicaciones Multiplataforma</h3>
@@ -24,7 +24,7 @@ function Knowledge() {
               </ul>
             </div>
           </div>
-          <div className='bg-[#111] rounded-lg w-full mt-6 lg:mt-0 lg:w-[45%] p-6 flex items-start space-x-4'>
+          <div className='bg-black rounded-lg w-full mt-6 lg:mt-0 lg:w-[45%] p-6 flex items-start space-x-4'>
             <div className='pt-2 text-blue-400'><i className="fa-brands fa-react fa-2xl text-6xl"></i></div>
             <div>
               <h3 className='text-2xl font-bold'>Desarrollador Web Fullstack</h3>
