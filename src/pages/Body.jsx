@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import CardComponent from "../components/CardComponent"
 // import {android1, android2, android3, articlepreview1, articlepreview2, productpreview1, productpreview2, introcomponent1, introcomponent2, introsection, ratingcomponent1, ratingcomponent2, moviesapisearch1, moviesapisearch2, moviesapisearch3, jsregexp, musicdbapi1, musicdbapi2, giphyapi1, giphyapi2, giphyapi3, githubapi, catclicker, unity1, unity2, unity3, unity4, unity5, qrcomponent2, qrcomponent1, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, android} from '../assets/images'
-import { android, android1, android2, android3, articlepreview1, articlepreview2, catclicker, giphyapi1, giphyapi2, giphyapi3, githubapi, introcomponent1, introcomponent2, introsection, jsregexp, moviesapisearch1, moviesapisearch2, moviesapisearch3, musicdbapi1, musicdbapi2, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, productpreview1, productpreview2, qrcomponent1, qrcomponent2, ratingcomponent1, ratingcomponent2, unity1, unity2, unity3, unity4, unity5 } from "../assets/images/urls"
+import { android, android1, android2, android3, articlepreview1, articlepreview2, catclicker, giphyapi1, giphyapi2, giphyapi3, githubapi, introcomponent1, introcomponent2, introsection, jsregexp, moviesapisearch1, moviesapisearch2, moviesapisearch3, musicdbapi1, musicdbapi2, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6, productpreview1, productpreview2, qrcomponent1, qrcomponent2, ratingcomponent1, ratingcomponent2, unity1, unity2, unity3, unity4, unity5 } from "../assets/images/urls"
 // import VideoComponent from "./components/VideoComponent"
 
 function Body() {
@@ -18,7 +18,7 @@ function Body() {
                   `
                     <p>Portfolio personal creado con Javascript, React y Tailwind, hecho como primera toma de contacto con React Router y Firebase</p>
                   `,
-                images:[portfolio1,portfolio2,portfolio3,portfolio4,portfolio5], web:"https://julio-souto.github.io/Portfolio-React-Julio-Souto/", github:"https://github.com/Julio-Souto/Portfolio-React" }
+                images:[portfolio1,portfolio2,portfolio3,portfolio4,portfolio5,portfolio6], web:"https://julio-souto.github.io/Portfolio-React-Julio-Souto/", github:"https://github.com/Julio-Souto/Portfolio-React" }
                 })
              }
           }/>
